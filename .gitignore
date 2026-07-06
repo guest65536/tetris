@@ -1,0 +1,6 @@
+# OSが作るファイル
+.DS_Store
+Thumbs.db
+
+# ローカル開発用(プレビュー設定など)
+.claude/

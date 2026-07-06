@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#10141C">
+  <title>テトリス</title>
+
+  <!-- PWA(ホーム画面追加・オフライン対応) -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="テトリス">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- 上部: スコアと操作ボタン -->
+    <header class="topbar">
+      <div class="score-box">
+        <span class="score-label">スコア</span>
+        <span id="score" class="score-value">0</span>
+      </div>
+      <div class="topbar-buttons">
+        <button id="mute-btn" class="icon-btn" aria-label="音のオン・オフ">🔊</button>
+        <button id="pause-btn" class="icon-btn" aria-label="一時停止">⏸</button>
+      </div>
+    </header>
+
+    <!-- 中央: ゲーム盤と次のミノ -->
+    <main class="play-area">
+      <canvas id="board" class="board"></canvas>
+      <div class="side">
+        <div class="next-box">
+          <span class="next-label">つぎ</span>
+          <canvas id="next" class="next-canvas"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <!-- 下部: 十字キー風の操作ボタン -->
+    <div class="controls">
+      <button id="btn-rotate" class="ctrl-btn ctrl-rotate" aria-label="回転">回転</button>
+      <button id="btn-left"   class="ctrl-btn ctrl-left"   aria-label="左へ">◀</button>
+      <button id="btn-down"   class="ctrl-btn ctrl-down"   aria-label="下へ">▼</button>
+      <button id="btn-right"  class="ctrl-btn ctrl-right"  aria-label="右へ">▶</button>
+    </div>
+
+    <!-- スタート／使い方の画面 -->
+    <div id="start-screen" class="overlay">
+      <div class="overlay-card">
+        <h1 class="overlay-title">テトリス</h1>
+        <div class="howto">
+          <p><span class="key">◀ ▶</span> 左右にうごかす</p>
+          <p><span class="key">回転</span> ブロックをまわす</p>
+          <p><span class="key">▼</span> ひとつ下におろす</p>
+          <p class="howto-note">よこ一列そろえると消えます</p>
+        </div>
+        <button id="start-btn" class="big-btn">スタート</button>
+      </div>
+    </div>
+
+    <!-- 一時停止の画面 -->
+    <div id="pause-screen" class="overlay hidden">
+      <div class="overlay-card">
+        <h2 class="overlay-title">一時停止</h2>
+        <button id="resume-btn" class="big-btn">つづける</button>
+      </div>
+    </div>
+
+    <!-- ゲームオーバーの画面 -->
+    <div id="gameover-screen" class="overlay hidden">
+      <div class="overlay-card">
+        <h2 class="overlay-title">おしまい</h2>
+        <p class="final-score">スコア <span id="final-score">0</span></p>
+        <button id="retry-btn" class="big-btn">もう一度</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
