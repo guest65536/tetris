@@ -26,8 +26,12 @@
         <span id="score" class="score-value">0</span>
       </div>
       <div class="topbar-buttons">
-        <button id="mute-btn" class="icon-btn" aria-label="音のオン・オフ">🔊</button>
-        <button id="pause-btn" class="icon-btn" aria-label="一時停止">⏸</button>
+        <button id="mute-btn" class="icon-btn" aria-label="音のオン・オフ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        </button>
+        <button id="pause-btn" class="icon-btn" aria-label="一時停止">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        </button>
       </div>
     </header>
 
@@ -44,10 +48,18 @@
 
     <!-- 下部: 十字キー風の操作ボタン -->
     <div class="controls">
-      <button id="btn-rotate" class="ctrl-btn ctrl-rotate" aria-label="回転">回転</button>
-      <button id="btn-left"   class="ctrl-btn ctrl-left"   aria-label="左へ">◀</button>
-      <button id="btn-down"   class="ctrl-btn ctrl-down"   aria-label="下へ">▼</button>
-      <button id="btn-right"  class="ctrl-btn ctrl-right"  aria-label="右へ">▶</button>
+      <button id="btn-rotate" class="ctrl-btn ctrl-rotate" aria-label="回転">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6V3L8 7l4 4V8c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5H5c0 3.87 3.13 7 7 7s7-3.13 7-7-3.13-7-7-7z"/></svg>
+      </button>
+      <button id="btn-left"   class="ctrl-btn ctrl-left"   aria-label="左へ">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="62,16 62,84 24,50"/></svg>
+      </button>
+      <button id="btn-down"   class="ctrl-btn ctrl-down"   aria-label="下へ">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="16,38 84,38 50,76"/></svg>
+      </button>
+      <button id="btn-right"  class="ctrl-btn ctrl-right"  aria-label="右へ">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,16 38,84 76,50"/></svg>
+      </button>
     </div>
 
     <!-- スタート／使い方の画面 -->

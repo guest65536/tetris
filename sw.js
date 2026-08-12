@@ -2,7 +2,7 @@
    - 初回にアプリ一式をキャッシュ(オフラインでも起動できる)
    - 通常はネット優先で取得し、失敗したらキャッシュを使う(更新が反映されやすい) */
 
-const CACHE = 'tetris-v1';
+const CACHE = 'tetris-v2';
 const ASSETS = [
   './',
   './index.html',
